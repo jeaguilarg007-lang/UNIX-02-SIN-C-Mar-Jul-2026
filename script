@@ -31,3 +31,11 @@ echo "mi archivo " > test.txt
 
 #Displays detailed information about the file (size, permissions, timestamps, etc.)
 stat test.txt
+  File: test.txt
+  Size: 12              Blocks: 8          IO Block: 4096   regular file
+Device: 7,4     Inode: 1572970     Links: 1
+Access: (0666/-rw-rw-rw-)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2026-04-02 15:35:49.636920705 +0000
+Modify: 2026-04-02 15:35:40.536920541 +0000
+Change: 2026-04-02 15:35:40.536920541 +0000
+ Birth: 2026-04-02 15:35:40.536920541 +0000
