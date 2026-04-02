@@ -11,4 +11,9 @@ sudo apt install parted
 #Displays partition details, then disk structure, separating outputs with lines
 sudo parted -l && echo -e "\n--\n" && lsblk -f && echo -e "\n--\n"
 
+#Lists the partition tables of all detected storage devices
+parted -l
+
+#Shows disks and partitions along with their file system information
+lsblk -f
 
