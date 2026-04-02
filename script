@@ -23,6 +23,11 @@ lsblk -f
 #Prints a line break with separators for better readability
 "\n--\n"
 
-# Checks if the system is using UEFI; otherwise prints BIOS
+#Checks if the system is using UEFI; otherwise prints BIOS
 [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
 
+#Creates a file named test.txt and writes "mi archivo" into it
+echo "mi archivo " > test.txt
+
+#Displays detailed information about the file (size, permissions, timestamps, etc.)
+stat test.txt
