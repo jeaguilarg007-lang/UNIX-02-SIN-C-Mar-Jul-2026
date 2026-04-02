@@ -1,0 +1,3 @@
+sudo apt update 
+# updates the list of available packages in the Linux repositories 
+
