@@ -1,3 +1,14 @@
-sudo apt update 
-# updates the list of available packages in the Linux repositories 
+#Jorge Aguilar 
+#Refreshes the list of available packages from the repositories
+sudo apt update
+
+#Upgrades all installed packages to their latest available versions
+sudo apt upgrade
+
+#Installs the "parted" utility on Debian-based systems
+sudo apt install parted
+
+#Displays partition details, then disk structure, separating outputs with lines
+sudo parted -l && echo -e "\n--\n" && lsblk -f && echo -e "\n--\n"
+
 
