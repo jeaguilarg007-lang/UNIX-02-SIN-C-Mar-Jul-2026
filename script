@@ -17,3 +17,8 @@ parted -l
 #Shows disks and partitions along with their file system information
 lsblk -f
 
+#Runs the next command only if the previous one was successful
+&&
+
+#Prints a line break with separators for better readability
+"\n--\n"
