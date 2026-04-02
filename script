@@ -45,3 +45,6 @@ ls -la
 
 #Shows the current working directory (useful for navigation)
 pwd
+
+#Runs a second command only if the first one executes successfully (command chaining example)
+ls && echo "Command executed successfully"
