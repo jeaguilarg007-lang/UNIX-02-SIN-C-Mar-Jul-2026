@@ -26,3 +26,11 @@ pwd
 whoami
 # cuando fue modificado cada archivo?
 ls -lt
+
+#manual del comando ls 
+man ls
+
+#
+ls /dev | head -5
+#
+ls /etc | tail -5
