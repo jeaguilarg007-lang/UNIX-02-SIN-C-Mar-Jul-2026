@@ -16,3 +16,6 @@ cd /workspaces/UNIX-02-SIN-C-Mar-Jul-2026
 
 # change directory to home dorectory using ~ shortcut
 cd ~
+
+# change directory to home using enviroment variable
+cd $HOME
