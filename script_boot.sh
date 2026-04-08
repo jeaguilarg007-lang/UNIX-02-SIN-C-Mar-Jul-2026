@@ -19,3 +19,10 @@ cd ~
 
 # change directory to home using enviroment variable
 cd $HOME
+
+# DONDE STOY
+pwd
+#QUIEN SOY 
+whoami
+# cuando fue modificado cada archivo?
+ls -lt
