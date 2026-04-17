@@ -5,10 +5,10 @@ ls --all
 #This is the long option form. It does exactly the same thing as ls -a.
 .  ..  .git  .gitignore  LICENSE  README.md  script.sh
 ls -h
-#
+#Human‑readable sizes. By itself, it has no visible effect because it only works with -l.
 LICENSE  README.md  script.sh
 ls -l -ah
-#
+# Lists all files (including hidden) in long format with details (permissions, owner, size, date). The -h makes sizes human‑readable.
 total 64K
 drwxrwxrwx+ 3 codespace root      4.0K Apr 17 14:18 .
 drwxr-xrwx+ 5 codespace root      4.0K Apr 17 14:17 ..
@@ -19,7 +19,7 @@ drwxrwxrwx+ 8 codespace root      4.0K Apr 17 14:21 .git
 -rw-rw-rw-  1 codespace codespace  315 Apr 17 14:25 script.sh
 
 ls -lah
-#
+# Same as ls -l -ah. The order of options doesn’t matter.
 total 64K
 drwxrwxrwx+ 3 codespace root      4.0K Apr 17 14:18 .
 drwxr-xrwx+ 5 codespace root      4.0K Apr 17 14:17 ..
@@ -30,11 +30,11 @@ drwxrwxrwx+ 8 codespace root      4.0K Apr 17 14:21 .git
 -rw-rw-rw-  1 codespace codespace  740 Apr 17 14:26 script.sh
 
 mkdir -- -rf
-#
+#Creates a directory literally named -rf. The -- tells mkdir to stop interpreting options, so -rf is treated as a directory name, not as flags.
 
 
 ls --help
-#
+#Displays the help manual for ls, listing all available options and their descriptions.
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
 
@@ -174,3 +174,21 @@ Report any translation bugs to <https://translationproject.org/team/>
 Full documentation <https://www.gnu.org/software/coreutils/ls>
 or available locally via: info '(coreutils) ls invocation'
 
+man ls
+#To be able to search for anything you have to put "/" and to exit you put "q" for example /all  and q
+
+man git -clone
+#Opens the manual page for Git, specifically the section about the clone command.
+
+ls -l
+#ls -list
+#-=type of file
+#symbolich link
+total 108
+drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
+-rw-rw-rw-  1 codespace root      34523 Apr 17 14:17  LICENSE
+-rw-rw-rw-  1 codespace root         53 Apr 17 14:17  README.md
+-rw-rw-rw-  1 codespace codespace 25525 Apr 17 14:39 'image copy 2.png'
+-rw-rw-rw-  1 codespace codespace 18534 Apr 17 14:37 'image copy.png'
+-rw-rw-rw-  1 codespace codespace  1331 Apr 17 14:32  image.png
+-rw-rw-rw-  1 codespace codespace  9807 Apr 17 14:48  script.sh
