@@ -194,7 +194,7 @@ drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
 -rw-rw-rw-  1 codespace codespace  9807 Apr 17 14:48  script.sh
 
 chmod +x script.sh
-#
+#Adds the execute permission to the file script.sh for all users (owner, group, and others). This makes the script runnable by anyone.
 ls -l
 total 108
 drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
@@ -206,7 +206,7 @@ drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
 -rwxrwxrwx  1 codespace codespace 10335 Apr 17 14:55  script.sh
 
 chmod u+x script.sh
-
+#Adds the execute permission only for the user/owner of the file. Group and others are not affected.
 @jeaguilarg007-lang ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_explorar) $ ls -l
 total 108
 drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
@@ -218,11 +218,10 @@ drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
 -rwxrwxrwx  1 codespace codespace 10809 Apr 17 14:57  script.sh
 
 touch secreto.txt
-#
+#Creates a new empty file named secreto.txt (or updates its timestamp if it already exists).
 chmod o-r secreto.txt
-#
-$ ls -l
-#
+#Removes the read permission (r) for others (o) on the file secreto.txt. That means users who are not the owner or in the group cannot read the file.
+ ls -l
 total 108
 drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
 -rw-rw-rw-  1 codespace root      34523 Apr 17 14:17  LICENSE
@@ -234,11 +233,10 @@ drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
 -rw-rw--w-  1 codespace codespace     0 Apr 17 14:59  secreto.txt
 
 touch privado
-#
+#Creates a new empty file named privado (or updates its timestamp if it already exists).
 chmod u+rw,go-rwx privado
-#
-$ ls -l
-#
+#Grants the owner (u) both read (r) and write (w) permissions, while removing all permissions (rwx) from the group (g) and others (o). This makes the file accessible only to the owner.
+ ls -l
 total 108
 drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
 -rw-rw-rw-  1 codespace root      34523 Apr 17 14:17  LICENSE
