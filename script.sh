@@ -192,3 +192,60 @@ drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
 -rw-rw-rw-  1 codespace codespace 18534 Apr 17 14:37 'image copy.png'
 -rw-rw-rw-  1 codespace codespace  1331 Apr 17 14:32  image.png
 -rw-rw-rw-  1 codespace codespace  9807 Apr 17 14:48  script.sh
+
+chmod +x script.sh
+#
+ls -l
+total 108
+drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
+-rw-rw-rw-  1 codespace root      34523 Apr 17 14:17  LICENSE
+-rw-rw-rw-  1 codespace root         53 Apr 17 14:17  README.md
+-rw-rw-rw-  1 codespace codespace 25525 Apr 17 14:39 'image copy 2.png'
+-rw-rw-rw-  1 codespace codespace 18534 Apr 17 14:37 'image copy.png'
+-rw-rw-rw-  1 codespace codespace  1331 Apr 17 14:32  image.png
+-rwxrwxrwx  1 codespace codespace 10335 Apr 17 14:55  script.sh
+
+chmod u+x script.sh
+
+@jeaguilarg007-lang ➜ /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 (boot_explorar) $ ls -l
+total 108
+drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
+-rw-rw-rw-  1 codespace root      34523 Apr 17 14:17  LICENSE
+-rw-rw-rw-  1 codespace root         53 Apr 17 14:17  README.md
+-rw-rw-rw-  1 codespace codespace 25525 Apr 17 14:39 'image copy 2.png'
+-rw-rw-rw-  1 codespace codespace 18534 Apr 17 14:37 'image copy.png'
+-rw-rw-rw-  1 codespace codespace  1331 Apr 17 14:32  image.png
+-rwxrwxrwx  1 codespace codespace 10809 Apr 17 14:57  script.sh
+
+touch secreto.txt
+#
+chmod o-r secreto.txt
+#
+$ ls -l
+#
+total 108
+drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
+-rw-rw-rw-  1 codespace root      34523 Apr 17 14:17  LICENSE
+-rw-rw-rw-  1 codespace root         53 Apr 17 14:17  README.md
+-rw-rw-rw-  1 codespace codespace 25525 Apr 17 14:39 'image copy 2.png'
+-rw-rw-rw-  1 codespace codespace 18534 Apr 17 14:37 'image copy.png'
+-rw-rw-rw-  1 codespace codespace  1331 Apr 17 14:32  image.png
+-rwxrwxrwx  1 codespace codespace 11382 Apr 17 14:58  script.sh
+-rw-rw--w-  1 codespace codespace     0 Apr 17 14:59  secreto.txt
+
+touch privado
+#
+chmod u+rw,go-rwx privado
+#
+$ ls -l
+#
+total 108
+drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
+-rw-rw-rw-  1 codespace root      34523 Apr 17 14:17  LICENSE
+-rw-rw-rw-  1 codespace root         53 Apr 17 14:17  README.md
+-rw-rw-rw-  1 codespace codespace 25525 Apr 17 14:39 'image copy 2.png'
+-rw-rw-rw-  1 codespace codespace 18534 Apr 17 14:37 'image copy.png'
+-rw-rw-rw-  1 codespace codespace  1331 Apr 17 14:32  image.png
+-rw-------  1 codespace codespace     0 Apr 17 15:00  privado
+-rwxrwxrwx  1 codespace codespace 11382 Apr 17 14:58  script.sh
+-rw-rw--w-  1 codespace codespace     0 Apr 17 14:59  secreto.txt
