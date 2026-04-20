@@ -254,3 +254,5 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 #The command writes the word hello inside the protected file /etc/archivo_protegido, using administrator permissions, and prevents anything from being displayed in the terminal.
 #We use 'sudo tee' to execute with all permissions
 #Also, when we put the 'dev/null/' we send it like a black hole and it is removed from the screen.}
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+#The correct command adds the word chao at the end of the protected file /etc/archivo_protegido, using administrator permissions.
