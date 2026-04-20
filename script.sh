@@ -262,3 +262,23 @@ echo "$HOME"
 # expand the variable
 echo '$HOME'
 #just literally prints "$HOME"
+echo 'echo "hola desde mi primer script"' >> hola.sh
+#Take the text "echo echo 'echo "hello from my first script"'" and save it inside the file called hola.sh. The >> symbol adds the content to the end of the file without deleting what already exists.
+cat hola.sh
+#It is mainly used to read the content of a file and display it directly on the terminal screen.
+ls -l hola.sh
+#
+chmod +x hola.sh
+#
+ls -l hola.sh
+#
+./hola.sh
+#
+ls/etc
+#does not nedd it. reading /etc in public
+touch /etc/prueba.txt 
+#yes,it needs it./ etc belongs to rrot does not allow normal users to write to it.
+mkdir ~/mi_carpeta
+#does not need it. ~is your own home(directory)
+apt install cowsay
+#yes,it need it.installing packages affects system directories (/usr, /bin, /lib, etc.) 
