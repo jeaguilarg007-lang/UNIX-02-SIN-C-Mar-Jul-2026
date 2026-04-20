@@ -247,3 +247,10 @@ drwxrwxrwx+ 2 codespace codespace  4096 Apr 17 14:31  -rf
 -rw-------  1 codespace codespace     0 Apr 17 15:00  privado
 -rwxrwxrwx  1 codespace codespace 11382 Apr 17 14:58  script.sh
 -rw-rw--w-  1 codespace codespace     0 Apr 17 14:59  secreto.txt
+
+sudo echo "hola" > /etc/archivo_protegido
+#The command doesn't work but let's use two solutions
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+#The command writes the word hello inside the protected file /etc/archivo_protegido, using administrator permissions, and prevents anything from being displayed in the terminal.
+#We use 'sudo tee' to execute with all permissions
+#Also, when we put the 'dev/null/' we send it like a black hole and it is removed from the screen.}
