@@ -267,13 +267,13 @@ echo 'echo "hola desde mi primer script"' >> hola.sh
 cat hola.sh
 #It is mainly used to read the content of a file and display it directly on the terminal screen.
 ls -l hola.sh
-#
+# it shows the details of the file hola.sh, including permissions, owner, group, size, and modification date.
 chmod +x hola.sh
-#
+# it modifies the permissions of the file hola.sh to make it executable by all users (owner, group, and others).
 ls -l hola.sh
-#
+# it shows the details of the file hola.sh, including permissions, owner, group, size, and modification date.
 ./hola.sh
-#
+#the . represents the current directory, and hola.sh is the script we want to execute. By running ./hola.sh, we are telling the system to execute the hola.sh script located in the current directory. 
 ls/etc
 #does not nedd it. reading /etc in public
 touch /etc/prueba.txt 
