@@ -256,3 +256,5 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 #Also, when we put the 'dev/null/' we send it like a black hole and it is removed from the screen.}
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 #The correct command adds the word chao at the end of the protected file /etc/archivo_protegido, using administrator permissions.
+sudo -i
+#It is used to open an interactive session as superuser (root). And to exit from here we use 'exit'.
