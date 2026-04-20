@@ -282,3 +282,13 @@ mkdir ~/mi_carpeta
 #does not need it. ~is your own home(directory)
 apt install cowsay
 #yes,it need it.installing packages affects system directories (/usr, /bin, /lib, etc.) 
+touch pruba.txt
+# creates a new empty file named pruba.txt in the current directory 
+chmod 600 pruba.txt
+# sets the permissions of pruba.txt to read and write for the owner only, and no permissions for group and others. This means that only the owner can read and modify the file, while others cannot access it at all.
+ls -l pruba.txt
+# displays the details of the file pruba.txt, including permissions, owner, group, size
+chmod 755 pruba.txt
+# sets the permissions of pruba.txt to read, write, and execute for the owner, and read and execute for group and others. This means that the owner can read, modify, and execute the file, while group members and others can only read and execute it.
+ls -l pruba.txt
+# displays the details of the file pruba.txt, including permissions, owner, group, size
