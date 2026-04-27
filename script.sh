@@ -292,3 +292,13 @@ chmod 755 pruba.txt
 # sets the permissions of pruba.txt to read, write, and execute for the owner, and read and execute for group and others. This means that the owner can read, modify, and execute the file, while group members and others can only read and execute it.
 ls -l pruba.txt
 # displays the details of the file pruba.txt, including permissions, owner, group, size
+
+ sudo apt upgrade
+ #Updates all installed packages on your system to their latest versions available in the repositories.
+sudo apt install acl
+#Installs the ACL (Access Control Lists) package, which allows you to define more advanced permissions than the traditional Linux ones (read, write, execute).
+sudo chown -R $(whoami) .
+ #Changes the ownership of all files and folders inside the current directory (.) to the user who is running the command ($(whoami) returns your username). The -R flag means it applies recursively to subfolders and files.
+ sudo setfacl -bnR .
+ #Removes all ACL permissions (setfacl -b) recursively (-R) from the current directory (.) and its contents. This will reset permissions to the default ones based on ownership and traditional read/write/execute settings.
+ #Artificial intelligence does not always give us the answer to what we need; instead, we have to look at other sites, for example: Stack Overflow, since there we can see the solutions of other people to our same problem and they can help us with problems we have.
