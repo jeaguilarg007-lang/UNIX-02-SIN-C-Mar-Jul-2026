@@ -316,3 +316,19 @@ touch secreto.txt
 #Creates a new empty file named secreto.txt (or updates its timestamp if it already exists). With the umask set to 077, this file will have permissions of 700 (rwx------), meaning only the owner can read, write, and execute it, while the group and others have no permissions.
 mkdir privado
 #Creates a new directory named privado. With the umask set to 077, this directory will also have permissions of 700 (rwx------), meaning only the owner can read, write, and execute it, while the group and others have no permissions.  
+whoami
+#Displays the username of the current user. This is useful for confirming which user account you are operating under, especially when dealing with permissions and ownership of files and directories.
+echo "hola" > mi_archivo 
+#Writes the text "hola" into a file named mi_archivo. If mi_archivo does not exist, it will be created. If it already exists, its contents will be overwritten with "hola".
+ls -l mi_archivo 
+#Displays the details of the file mi_archivo, including permissions, owner, group, size, and modification date. This allows you to verify the permissions and ownership of the file after it has been created or modified.
+sudo useradd -m -s /usr/bin/zsh luna
+#Creates a new user account named luna with a home directory (-m) and sets the default shell to zsh (-s /usr/bin/zsh). This command requires superuser privileges, which is why it is prefixed with sudo.
+  ls /home
+#Lists the contents of the /home directory, which should now include a directory named luna, corresponding to the new user account that was just created. This allows you to verify that the home directory for the new user has been successfully created.
+ls -l mi_archivo
+#Displays the details of the file mi_archivo, including permissions, owner, group, size, and modification date. This allows you to verify the permissions and ownership of the file after it has been created or modified.
+sudo chown luna mi_archivo
+#Changes the ownership of the file mi_archivo to the user luna. This means that luna will now be the owner of the file and will have permissions based on that ownership.
+ls -l mi_archivo
+#Displays the details of the file mi_archivo, including permissions, owner, group, size, and modification date. This allows you to verify that the ownership of the file has been successfully changed
