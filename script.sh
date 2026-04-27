@@ -302,3 +302,11 @@ sudo chown -R $(whoami) .
  sudo setfacl -bnR .
  #Removes all ACL permissions (setfacl -b) recursively (-R) from the current directory (.) and its contents. This will reset permissions to the default ones based on ownership and traditional read/write/execute settings.
  #Artificial intelligence does not always give us the answer to what we need; instead, we have to look at other sites, for example: Stack Overflow, since there we can see the solutions of other people to our same problem and they can help us with problems we have.
+umask 027
+# Sets the default file creation permissions for new files and directories. The umask value of 027 means that new files will have permissions of 750 (rwxr-x---) and new directories will have permissions of 750 (rwxr-x---). This means that the owner has full permissions, the group has read and execute permissions, and others have no permissions.
+umask
+# Displays the current umask value, which is 027 in this case.
+touch archivo2
+# Creates a new empty file named archivo2 (or updates its timestamp if it already exists). The permissions of this file will be determined by the current umask setting.
+mkdir directorio2
+# Creates a new directory named directorio2. The permissions of this directory will also be determined by the current umask setting.
