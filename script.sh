@@ -310,3 +310,9 @@ touch archivo2
 # Creates a new empty file named archivo2 (or updates its timestamp if it already exists). The permissions of this file will be determined by the current umask setting.
 mkdir directorio2
 # Creates a new directory named directorio2. The permissions of this directory will also be determined by the current umask setting.
+umask 077
+# Sets the default file creation permissions to 700 (rwx------) for files and directories. This means that only the owner has read, write, and execute permissions, while the group and others have no permissions.
+touch secreto.txt
+#Creates a new empty file named secreto.txt (or updates its timestamp if it already exists). With the umask set to 077, this file will have permissions of 700 (rwx------), meaning only the owner can read, write, and execute it, while the group and others have no permissions.
+mkdir privado
+#Creates a new directory named privado. With the umask set to 077, this directory will also have permissions of 700 (rwx------), meaning only the owner can read, write, and execute it, while the group and others have no permissions.  
