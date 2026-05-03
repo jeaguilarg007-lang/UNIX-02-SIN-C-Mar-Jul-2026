@@ -1,36 +1,36 @@
 cd calculadora 
-# ruta relativa
+# Change directory using a relative path
 cd /workspace/Unix-02-SIN-C-Mar-Jul-2026/calculadora
-#ruta absoluta
+#Change directory using an absolute path
 ls -lai
-#shows the inodo
+# Lists files including hidden ones, with inode and detailed information
 ls -l -a -i
-# the same options but in a separate way
+# Shows detailed metadata of the current directory (permissions, size, timestamps)
+
 stat .
+# Shows detailed metadata of the current directory (permissions, size, timestamps)
 
-# change directory  to home directory from any location of operative
 cd 
+# change directory  to home directory from any location of operative
 
-# change directory to home directory using obsoluty route
 cd /workspaces/UNIX-02-SIN-C-Mar-Jul-2026
+# change directory to home directory using obsoluty route
 
-# change directory to home dorectory using ~ shortcut
 cd ~
+# Go to home directory using ~ shortcut
 
-# change directory to home using enviroment variable
 cd $HOME
+# change directory to home using enviroment variable
 
-# DONDE STOY
 pwd
-#QUIEN SOY 
+#Prints the current working directory
 whoami
-# cuando fue modificado cada archivo?
+# Displays the current logged-in user
 ls -lt
-
-#manual del comando ls 
+#Lists files sorted by last modification time (newest first)
 man ls
-
-#
+#Opens the manual page for the 'ls' command
 ls /dev | head -5
-#
+#Lists the first 5 entries inside /dev directory (useful for large outputs)
 ls /etc | tail -5
+#Lists the last 5 entries inside /etc directory
