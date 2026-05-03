@@ -50,3 +50,35 @@ aptitude -vv moo
 aptitude -vvv moo
 #Applies maximum verbosity, resulting in a short and more expressive humorous response.
 ![aptitude -vvv moo](image_copy13.png)
+
+pwd
+#The pwd command (print working directory) is a command-line instruction used to display the full path of the current directory where the user is located in the file system.
+![pwd](image_copy14.png)
+
+cd documents
+#Changes the current directory to the **Documents folder** using a relative path (from the current location).
+![cd documents](image_copy15.png)
+
+cd /
+#Changes the current directory to the **root directory (/)**, which is the top level of the file system.
+![cd /](image_copy16.png)
+
+cd /home/sysadmin
+#Changes the current directory to the **/home/sysadmin directory** using an absolute path.
+![cd /home/sysadmin](image_copy17.png)
+
+cd School/Art
+#Changes the current directory to the **Art folder inside School**, using a relative path from the current directory.
+![cd School/Art](image_copy18.png)
+
+pwd
+#Displays the **full path of the current working directory**, showing where the user is located in the file system.
+![pwd](image_copy19.png)
+
+cd ..
+#Moves to the **parent directory** (one level up from the current directory).
+![cd ..](image_copy20.png)
+
+cd ~
+#Changes the current directory to the **user's home directory**, regardless of the current location.
+![cd ~](image_copy21.png)
