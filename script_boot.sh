@@ -6,22 +6,16 @@ ls -lai
 # Lists files including hidden ones, with inode and detailed information
 ls -l -a -i
 # Shows detailed metadata of the current directory (permissions, size, timestamps)
-
 stat .
 # Shows detailed metadata of the current directory (permissions, size, timestamps)
-
 cd 
 # change directory  to home directory from any location of operative
-
 cd /workspaces/UNIX-02-SIN-C-Mar-Jul-2026
 # change directory to home directory using obsoluty route
-
 cd ~
 # Go to home directory using ~ shortcut
-
 cd $HOME
 # change directory to home using enviroment variable
-
 pwd
 #Prints the current working directory
 whoami
