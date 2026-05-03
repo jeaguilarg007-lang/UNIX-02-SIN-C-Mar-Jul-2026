@@ -82,3 +82,29 @@ cd ..
 cd ~
 #Changes the current directory to the **user's home directory**, regardless of the current location.
 ![cd ~](image_copy21.png)
+
+ls
+#Displays a list of files and directories in the current directory by default.
+![ls](image_copy22.png)
+
+ls -l /var/log/
+#Displays a detailed (long format) list of files in the /var/log/ directory, including permissions, owner, size, and modification date.
+![ls -l /var/log/](image_copy23.png)
+
+ls -lt /var/log  
+#Displays a detailed list of files in /var/log sorted by **time (timestamp)**, showing the most recently modified files first.
+![ls -lt /var/log](image_copy24.png)
+
+ls -l -S /var/log
+#Displays a detailed list of files in /var/log sorted by **file size**, from largest to smallest.
+![ls -l -S /var/log](image_copy25.png)
+
+ls -lSr /var/log
+#Displays a detailed list of files sorted by **file size in reverse order**, from smallest to largest.
+![ls -lSr /var/log](image_copy26.png)
+
+ls -r /var/log 
+#Displays the list of files in /var/log in **reverse alphabetical order**.
+![ls -r /var/log](image_copy27.png)
+
+
