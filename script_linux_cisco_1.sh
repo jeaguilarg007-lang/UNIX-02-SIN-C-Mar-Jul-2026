@@ -182,4 +182,46 @@ ls -l
 sudo ./hello.sh 
 #Executes the script with administrative privileges since the owner is now root.
  ![sudo ./hello.sh](image_copy46.png)
- 
+
+ cat alpha.txt 
+ #Displays the entire content of the file at once in the terminal.
+ ![cat alpha.txt](image_copy47.png)
+
+ head alpha.txt
+#Shows the first 10 lines of the file by default.
+![head alpha.txt](image_copy48.png)
+
+tail alpha.txt 
+#Displays the last 10 lines of the file by default.
+![tail alpha.txt](image_copy49.png)
+
+head -n 5 alpha.txt 
+#Shows the first 5 lines of the file.
+![tail alpha.txt](image_copy50.png)
+
+tail -n 5 alpha.txt
+#Displays the last 5 lines of the file.
+![tail alpha.txt](image_copy51.png)
+
+cd ~/Documents 
+#Changes the current directory to the user’s Documents folder.
+![tail alpha.txt](image_copy52.png)
+
+cp /etc/passwd .
+#Copies the file /etc/passwd into the current directory.
+![tail alpha.txt](image_copy53.png)
+
+ls
+#Lists the files in the current directory to verify that the copy was successful.
+![tail alpha.txt](image_copy54.png)
+
+cd ~
+#Changes the current directory to the user’s home directory.
+![tail alpha.txt](image_copy55.png)
+
+dd if=/dev/zero of=/tmp/swapex bs=1M count=50 
+#Creates a 50 MB file filled with zeros by copying data from /dev/zero to /tmp/swapex using 1 MB blocks.
+![tail alpha.txt](image_copy56.png)
+
+#Here I attach, professor, that I completed everything from start to finish.
+![finish](finish.png)
