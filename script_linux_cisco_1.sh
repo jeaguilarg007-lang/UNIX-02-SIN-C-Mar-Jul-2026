@@ -143,4 +143,43 @@ ls -l hello.sh
 #Displays detailed information about the file including permissions, owner, group, size, and date.
 ![ls -l hello.sh](image_copy36.png)
 
+./hello.sh  
+#Executes the script located in the current directory, requiring execute permission.
+![./hello.sh](image_copy37.png)
 
+chmod u+x hello.sh 
+#Adds execute permission to the file for the owner (user).
+![chmod u+x hello.sh](image_copy38.png)
+
+ls -l hello.sh
+#Displays the updated file permissions and detailed file information.
+![ls -l hello.sh](image_copy39.png)
+
+./hello.sh  
+#Runs the script again successfully after execution permission has been granted.
+![./hello.sh](image_copy40.png)
+
+cd ~/Documents  
+#Changes the current directory to the Documents folder of the current user.
+![cd ~/Documents](image_copy41.png)
+
+ls -l
+#Lists all files in the directory with detailed information including owner and permissions.
+![ls -l](image_copy42.png)
+
+ sudo chown root hello.sh 
+ #Changes the owner of the file to root using administrative privileges
+ ![sudo chown root hello.sh](image_copy43.png)
+
+ ls -l hello.sh  
+ #Displays updated file information confirming the new owner.
+ ![ls -l hello.sh](image_copy44.png)
+
+./hello.sh 
+#Attempts to execute the script but fails due to insufficient permissions for the current user.
+![./hello.sh](image_copy45.png)
+
+sudo ./hello.sh 
+#Executes the script with administrative privileges since the owner is now root.
+ ![sudo ./hello.sh](image_copy46.png)
+ 
