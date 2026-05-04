@@ -107,4 +107,40 @@ ls -r /var/log
 #Displays the list of files in /var/log in **reverse alphabetical order**.
 ![ls -r /var/log](image_copy27.png)
 
+su -
+#Switches the current session to the root user with a full login environment and administrative privileges.
+![su -](image_copy28.png)
+
+exit
+#Ends the current shell session and returns to the previous user or closes the terminal.
+![exit](image_copy29.png)
+
+sl
+#Runs a Steam Locomotive ASCII animation in the terminal, sometimes requiring elevated permissions.
+![sl](image_copy30.png)
+
+su -
+#Repeats switching the session to root, granting full administrative access with a complete environment.
+![su -](image_copy31.png)
+
+sl
+#Executes the same terminal animation again under root privileges.
+![sl](image_copy32.png)
+
+exit
+#Logs out of the root session and returns to the standard user (sysadmin).
+![exit](image_copy33.png)
+
+sudo sl
+#Runs the sl command with temporary root privileges without changing the current user session.
+![sudo sl](image_copy34.png)
+
+cd ~/Documents
+# Changes the current directory to the Documents folder of the current user.
+![cd ~/Documents](image_copy35.png)
+
+ls -l hello.sh
+#Displays detailed information about the file including permissions, owner, group, size, and date.
+![ls -l hello.sh](image_copy36.png)
+
 
