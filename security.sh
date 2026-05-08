@@ -114,3 +114,14 @@ groups $USER
 #Displays the groups that the current user belongs to, using the $USER environment variable to specify the user.
 root : root
 
+id -u 
+#Displays the UID (User ID) of the current user.
+0
+
+id -g
+#Displays the GID (Group ID) of the current user.
+0
+
+id -G
+#Displays all the group IDs (GIDs) that the current user belongs to.
+0
