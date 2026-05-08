@@ -1,15 +1,15 @@
 id 
-#
-
+#Displays information about the current user:
+# UID (User ID), GID (Group ID), and the groups the user belongs to.
+uid=0(root) gid=0(root) grupos=0(root)
 
 groups
-#
+#Displays only the groups the current user belongs to.
+# Useful for checking permissions and group memberships. 
 
 
 cat /etc/passwd
-#
-
-
+#Displays the contents of the /etc/passwd file, which contains user account information.
 root:x:0:0:root:/root:/usr/bin/zsh
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -31,8 +31,12 @@ nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
 systemd-network:x:997:997:systemd Network Management:/:/usr/sbin/nologin
 debian-tor:x:100:101::/var/lib/tor:/bin/false
 tcpdump:x:996:996:tcpdump:/nonexistent:/usr/sbin/nologin
+
 cat /etc/passwd | head -10
-#   
+#Displays only the first 10 lines of the /etc/passwd file.
+# "cat" prints the entire file.
+# "|" (pipe) sends the output to another command.
+# "head -10" limits the output to the first 10 lines.   
 root:x:0:0:root:/root:/usr/bin/zsh
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -43,4 +47,21 @@ man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
 lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
 mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
 news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+
+touch text.txt
+#Creates an empty file named text.txt in the current directory.
+
+ls -l text.txt
+#Lists the details of the file text.txt, including permissions, owner, group, size, and modification date.
+total 68
+drwxrwxrwx+ 4 root root  4096 may  8 14:40 .
+drwxr-xrwx+ 4 root root  4096 may  8 14:20 ..
+drwxrwxrwx+ 2 root root  4096 may  8 14:20 .devcontainer
+drwxrwxrwx+ 7 root root  4096 may  8 14:40 .git
+-rw-rw-rw-  1 root root  4688 may  8 14:20 .gitignore
+-rw-rw-rw-  1 root root 34523 may  8 14:20 LICENSE
+-rw-rw-rw-  1 root root    53 may  8 14:20 README.md
+-rw-rw-rw-  1 root root  1517 may  8 14:38 security.sh
+-rw-rw-rw-  1 root root     0 may  8 14:40 text.txt
+
 
