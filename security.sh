@@ -125,3 +125,9 @@ id -g
 id -G
 #Displays all the group IDs (GIDs) that the current user belongs to.
 0
+mkdir ~/proyecto_unix/
+#Creates a directory named proyecto_unix in the current user's home directory.
+
+ls -ls ~/proyecto_unix/
+#Lists the details of the proyecto_unix directory, including permissions, owner, group, size, and modification date.
+total 0
