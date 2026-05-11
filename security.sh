@@ -131,3 +131,54 @@ mkdir ~/proyecto_unix/
 ls -ls ~/proyecto_unix/
 #Lists the details of the proyecto_unix directory, including permissions, owner, group, size, and modification date.
 total 0
+
+groupadd [operaciones] Desarrolladores
+#Creates a new group named Desarrolladores with the GID (Group ID) of 1001. The [operaciones] part is not a valid option and should be removed.
+Modo de uso: groupadd [opciones] GRUPO
+
+Opciones:
+  -f, --force                   termina si el grupo ya existe, y cancela -g
+                                si el GID ya se está en uso
+  -g, --gid GID                 utiliza GID para el nuevo grupo
+  -h, --help                    muestra este mensaje de ayuda y termina
+  -K, --key CLAVE=VALOR         sobrescribe los valores predeterminados de
+                                «/etc/login.defs»
+  -o, --non-unique              permite crear grupos con GID (no únicos)
+                                duplicados
+  -p, --password CONTRASEÑA     utiliza esta contraseña cifrada para el nuevo
+                                grupo
+  -r, --system                  crea una cuenta del sistema
+  -R, --root DIR_CHROOT         establece DIR_CHROOT como el directorio
+                                al cual hacer chroot
+  -P, --prefix PREFIX_DIR       directory prefix
+  -U, --users USERS             comma-separated list of users to add as
+                                 members of this group
+
+sudo groupadd Desarrolladores
+#Creates a new group named Desarrolladores with the GID (Group ID) of 1001, using sudo to execute the command with superuser privileges.
+
+sudo groupadd -g 2000 operaciones
+#Creates a new group named operaciones with the GID (Group ID) of 2000, using sudo to execute the command with superuser privileges.
+
+
+groupadd -g 2000 operacione
+#create a new group but with a specific id
+groupadd desarrolladores
+#create a new group
+grep "desarrolladores\|operaciones\|servicios-web" /etc/group
+#show the groups
+grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
+#set the maximum and minimum numbers of the groups
+#create groups with addgroup
+addgroup --system cache_web
+addgroup --gid 2100 marketing
+grep "diseno\|marketing\|cache_web" /etc/group
+usermod -aG diseno root
+usermod -aG desarrolladores root
+#add root into a group
+grep "desarrolladores\|diseno" /etc/group
+#Searches the /etc/group file for entries that contain either desarrolladores or diseno
+adduser root marketing
+#create a group called marketing
+id
+#show the groups and ids
