@@ -170,12 +170,20 @@ grep "desarrolladores\|operaciones\|servicios-web" /etc/group
 grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
 #set the maximum and minimum numbers of the groups
 #create groups with addgroup
-addgroup --system cache_web
-addgroup --gid 2100 marketing
-grep "diseno\|marketing\|cache_web" /etc/group
-usermod -aG diseno root
-usermod -aG desarrolladores root
-#add root into a group
+addgroup --system cache_web          
+# Creates a system group named cache_web
+
+addgroup --gid 2100 marketing        
+# Creates a group named marketing with GID 2100
+
+grep "diseno\|marketing\|cache_web" /etc/group   
+# Searches and displays the groups diseno, marketing, and cache_web
+
+usermod -aG diseno root             
+ # Adds the root user to the diseno group
+
+usermod -aG desarrolladores root    
+ # Adds the root user to the desarrolladores group
 grep "desarrolladores\|diseno" /etc/group
 #Searches the /etc/group file for entries that contain either desarrolladores or diseno
 adduser root marketing
