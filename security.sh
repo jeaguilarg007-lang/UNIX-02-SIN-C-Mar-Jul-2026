@@ -190,3 +190,6 @@ adduser root marketing
 #create a group called marketing
 id
 #show the groups and ids
+usermod -G desarrolladores $USER
+# Changes the user's secondary groups to desarrolladores and removes all previous secondary groups
+
