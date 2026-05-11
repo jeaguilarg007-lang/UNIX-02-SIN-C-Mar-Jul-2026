@@ -213,3 +213,16 @@ touch ~/lab_chgrp/reportes/informe.txt
 
 touch ~/lab_chgrp/scripts/deploy.sh                 
 # Creates an empty file named deploy.sh
+
+ls -la ~/lab_chgrp/proyectos/   
+# Lists all files and directories inside proyectos with detailed information (permissions, owner, size, modification date)
+
+ls -la ~/lab_chgrp/reportes/     
+# Lists all files and directories inside reportes with detailed information (permissions, owner, size, modification date)
+
+chgrp desarrolladores ~/lab_chgrp/proyectos/app.py   
+# Changes the group ownership of app.py to the group "desarrolladores"
+
+ls -la ~/lab_chgrp/proyectos/                         
+# Lists all files in the proyectos directory showing updated permissions and group ownership
+
