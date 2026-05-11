@@ -193,3 +193,23 @@ id
 usermod -G desarrolladores $USER
 # Changes the user's secondary groups to desarrolladores and removes all previous secondary groups
 
+groupadd grupo_temporal              
+# Creates a new group named grupo_temporal
+
+usermod -aG diseno,marketing,grupo_temporal $USER   
+# Adds the user to the diseno, marketing, and grupo_temporal groups without removing existing groups
+
+mkdir -p ~/lab_chgrp/{proyectos,reportes,scripts}   
+# Creates the directories proyectos, reportes, and scripts inside lab_chgrp
+
+touch ~/lab_chgrp/proyectos/app.py                 
+ # Creates an empty file named app.py
+
+touch ~/lab_chgrp/proyectos/config.json            
+ # Creates an empty file named config.json
+
+touch ~/lab_chgrp/reportes/informe.txt              
+# Creates an empty file named informe.txt
+
+touch ~/lab_chgrp/scripts/deploy.sh                 
+# Creates an empty file named deploy.sh
