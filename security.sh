@@ -30,3 +30,13 @@ apt upgrade
 #
 apt install util-linux-extra
 #
+groupadd Desarrolladores
+#
+id -gn
+#
+newgrp Desarrolladores
+#
+id -gn
+#
+echo $$
+#
