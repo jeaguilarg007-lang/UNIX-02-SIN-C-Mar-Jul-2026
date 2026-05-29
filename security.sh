@@ -24,3 +24,9 @@ touch ~/antes_de_newgrp.txt
 ls -la ~/antes_de_newgrp.txt
 #
 ##-rw-r--r-- 1 root root 0 may 29 15:04 /root/antes_de_newgrp.txt
+apt update
+#
+apt upgrade
+#
+apt install util-linux-extra
+#
