@@ -313,3 +313,36 @@ exit
 # Terminates the current root session and returns to the previous user account.
 
 ##logout
+
+ps
+# Displays the processes currently running in the active terminal session, including their process IDs and execution times.
+
+##PID TTY          TIME CMD
+##87 pts/0    00:00:00 bash
+##142 pts/0   00:00:00 ps
+
+ps -e
+# Displays all running processes on the system, regardless of which user or terminal started them.
+
+##PID TTY          TIME CMD
+##1 pts/0     00:00:00 init
+##33 ?        00:00:00 rsyslogd
+##37 ?        00:00:00 cron
+##39 ?        00:00:00 sshd
+##56 ?        00:00:00 named
+##77 pts/0    00:00:00 login
+##87 pts/0    00:00:00 bash
+##143 pts/0   00:00:00 ps
+
+ps -ef
+# Displays a detailed list of all running processes, including the user, process ID, parent process ID, start time, and command used to launch each process.
+
+##UID          PID    PPID  C STIME TTY          TIME CMD
+##root           1       0  0 20:11 pts/0    00:00:00 /sbin??? /init
+##syslog        33       1  0 20:11 ?        00:00:00 /usr/sbin/rsyslogd
+##root          37       1  0 20:11 ?        00:00:00 /usr/sbin/cron
+##root          39       1  0 20:11 ?        00:00:00 /usr/sbin/sshd
+##bind          56       1  0 20:11 ?        00:00:00 /usr/sbin/named -u bind
+##root          77       1  0 20:11 pts/0    00:00:00 /bin/login -f
+##sysadmin      87      77  0 20:11 pts/0    00:00:00 -bash
+##sysadmin     144      87  0 21:59 pts/0    00:00:00 ps -ef
