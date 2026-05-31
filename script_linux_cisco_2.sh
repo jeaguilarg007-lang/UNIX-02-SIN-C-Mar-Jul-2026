@@ -65,3 +65,176 @@ cp /etc/passwd .
 grep sysadmin passwd
 # Searches the passwd file for lines containing the word "sysadmin" and displays any matching entries.
 ##sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash
+
+cd ~/Documents
+# Changes the current working directory to the user's Documents folder, allowing access to files stored in that location.
+
+grep sysadmin passwd
+# Searches the file passwd for lines containing the word "sysadmin" and displays any matching results.
+
+##sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash
+
+grep 'root' passwd
+# Searches the passwd file for all occurrences of the word "root" and displays the matching lines.
+
+##root:x:0:0:root:/root:/bin/bash
+##operator:x:1000:37::/root:
+
+grep '^root' /etc/passwd
+# Searches the /etc/passwd file for lines that begin with the word "root" using the ^ anchor character.
+
+##root:x:0:0:root:/root:/bin/bash
+
+cat alpha-first.txt
+# Displays the contents of the alpha-first.txt file on the terminal.
+
+##A is for Animal
+##B is for Bear
+##C is for Cat
+##D is for Dog
+##E is for Elephant
+##F is for Flower
+
+grep 'r$' alpha-first.txt
+# Searches for lines that end with the letter "r" using the $ anchor character.
+
+##B is for Bear
+##F is for Flower
+
+cat red.txt
+# Displays the contents of the red.txt file.
+
+##Red
+##Reef
+##Rot
+##Reeed
+##Rd
+##Rod
+##Roof
+##Reed
+##Root
+##reel
+##read
+
+grep 'r..f' red.txt
+# Searches for lines containing the letter "r" followed by any two characters and ending with the letter "f".
+
+##reef
+##roof
+
+grep 'r..d' red.txt
+# Searches for four-letter words that start with "r", contain any two characters, and end with "d".
+
+##reed
+##read
+
+grep '....' red.txt
+# Searches for lines containing at least four consecutive characters of any type.
+
+##reef
+##reeed
+##roof
+##reed
+##root
+##reel
+##read
+
+grep 'r..t' /etc/passwd
+# Searches the /etc/passwd file for patterns that start with "r", contain any two characters, and end with "t".
+
+##root:x:0:0:root:/root:/bin/bash
+##operator:x:1000:37::/root:
+
+cat profile.txt
+# Displays the contents of the profile.txt file.
+
+##Hello my name is Joe.
+##I am 37 years old.
+##3121991
+##My favorite food is avocados.
+##I have 2 dogs.
+##123456789101112
+
+grep '[0-9]' profile.txt
+# Searches for lines containing at least one numeric digit from 0 to 9.
+
+##I am 37 years old.
+##3121991
+##I have 2 dogs.
+##123456789101112
+
+grep '[^0-9]' profile.txt
+# Searches for lines containing at least one character that is not a numeric digit.
+
+##Hello my name is Joe.
+##I am 37 years old.
+##My favorite food is avocados.
+##I have 2 dogs.
+
+grep '[.]' profile.txt
+# Searches for lines containing the literal period character (.).
+
+##Hello my name is Joe.
+##I am 37 years old.
+##My favorite food is avocados.
+##I have 2 dogs.
+
+cat red.txt
+# Displays the contents of the red.txt file.
+
+grep 're*d' red.txt
+# Searches for patterns where the letter "e" may appear zero or more times between "r" and "d".
+
+##red
+##reeed
+##rd
+##reed
+
+grep 'r[oe]*d' red.txt
+# Searches for patterns where the letters "o" or "e" may appear zero or more times between "r" and "d".
+
+##red
+##reeed
+##rd
+##rod
+##reed
+
+grep 'z*' red.txt
+# Searches using a pattern where the letter "z" can appear zero or more times, causing every line to match.
+
+##red
+##reef
+##rot
+##reeed
+##rd
+##rod
+##roof
+##reed
+##root
+##reel
+##read
+
+grep 'e*' red.txt
+# Searches using a pattern where the letter "e" can appear zero or more times, resulting in all lines being matched.
+
+##red
+##reef
+##rot
+##reeed
+##rd
+##rod
+##roof
+##reed
+##root
+##reel
+##read
+
+grep 'ee*' red.txt
+# Searches for lines containing at least one "e" followed by zero or more additional "e" characters.
+
+##red
+##reef
+##reeed
+##reed
+##reel
+##read
