@@ -392,3 +392,32 @@ sudo apt-get purge cowsay
 ##The following packages will be REMOVED:
 ##cowsay*
 ##Removing cowsay (3.03+dfsg1-6) ...
+
+passwd
+# Attempts to change the password of the currently logged-in user by prompting for the current and new passwords.
+
+##Changing password for sysadmin.
+##passwd: Authentication token manipulation error
+##passwd: password unchanged
+
+passwd -S sysadmin
+# Displays the password status information for the user sysadmin, including password status and aging details.
+
+##sysadmin P 12/20/2017 0 99999 7 -1
+
+su root
+# Switches to the root user account after successful authentication, providing administrative privileges.
+
+##Password:
+
+passwd sysadmin
+# Changes the password for the user sysadmin while logged in as the root user.
+
+##Enter new UNIX password:
+##Retype new UNIX password:
+##passwd: password updated successfully
+
+exit
+# Terminates the current root session and returns to the previous user session.
+
+##exit
