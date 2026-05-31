@@ -56,3 +56,12 @@ ls Work
 # Checks whether the Work directory still exists after the deletion process.
 ##ls: cannot access Work: No such file or directory
 
+cd ~/Documents
+# Changes the current working directory to the user's Documents folder, allowing access to files stored in that location.
+
+cp /etc/passwd .
+# Copies the passwd file from the /etc directory to the current directory. The dot (.) represents the current working directory.
+
+grep sysadmin passwd
+# Searches the passwd file for lines containing the word "sysadmin" and displays any matching entries.
+##sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash
