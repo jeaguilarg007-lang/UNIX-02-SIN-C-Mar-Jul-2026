@@ -464,3 +464,6 @@ cat newfile1.txt
 
 ##I like food.
 ##This food is good.
+
+vi newfile.txt
+# Opens the file newfile.txt in the Vi text editor, allowing the user to create, view, or modify its contents.
