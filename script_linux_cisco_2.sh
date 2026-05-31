@@ -277,3 +277,39 @@ Broadcast message from sysadmin@localhost
 Broadcast message from sysadmin@localhost
 ##The system is going down for maintenance NOW!
 ##Goodbye World!
+
+ifconfig
+# Displays the current network configuration of all available network interfaces, including IP addresses, subnet masks, hardware addresses, and interface status.
+
+##eth0      Link encap:Ethernet  HWaddr 02:42:c0:a8:01:02
+##inet addr:192.168.1.2  Bcast:192.168.1.255  Mask:255.255.255.0
+##UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+##RX packets:56 errors:0 dropped:0 overruns:0 frame:0
+##TX packets:59 errors:0 dropped:0 overruns:0 carrier:0
+##...
+
+ping -c 4 192.168.1.2
+# Sends four ICMP echo requests to the local network interface to verify connectivity and measure network response times.
+
+##PING 192.168.1.2 (192.168.1.2) 56(84) bytes of data.
+##64 bytes from 192.168.1.2: icmp_seq=1 ttl=64 time=0.115 ms
+##64 bytes from 192.168.1.2: icmp_seq=2 ttl=64 time=0.090 ms
+##64 bytes from 192.168.1.2: icmp_seq=3 ttl=64 time=0.094 ms
+##64 bytes from 192.168.1.2: icmp_seq=4 ttl=64 time=0.121 ms
+##4 packets transmitted, 4 received, 0% packet loss
+
+ping -c 4 192.168.1.3
+# Sends four ICMP echo requests to the host with IP address 192.168.1.3 to test whether it is reachable on the network.
+
+##PING 192.168.1.3 (192.168.1.3) 56(84) bytes of data.
+##From 192.168.1.2 icmp_seq=1 Destination Host Unreachable
+##From 192.168.1.2 icmp_seq=2 Destination Host Unreachable
+##From 192.168.1.2 icmp_seq=3 Destination Host Unreachable
+##From 192.168.1.2 icmp_seq=4 Destination Host Unreachable
+##4 packets transmitted, 0 received, +4 errors, 100% packet loss
+##pipe 4
+
+exit
+# Terminates the current root session and returns to the previous user account.
+
+##logout
