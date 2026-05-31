@@ -238,3 +238,42 @@ grep 'ee*' red.txt
 ##reed
 ##reel
 ##read
+
+su -
+# Switches to the root user account and loads the root user's login environment, providing full administrative privileges.
+
+##Password:
+##root@localhost:~#
+
+shutdown now
+# Initiates an immediate system shutdown process and notifies all logged-in users that the system is going down for maintenance.
+
+Broadcast message from sysadmin@localhost
+##The system is going down for maintenance NOW!
+
+date
+# Displays the current system date and time, including the day of the week, month, time, time zone, and year.
+
+##Sun May 31 21:48:43 UTC 2026
+
+shutdown 01:51
+# Schedules the system to shut down at the specified time (01:51) and broadcasts a warning message to all users.
+
+Broadcast message from sysadmin@localhost
+##The system is going down for maintenance in 1 minute!
+
+Broadcast message from sysadmin@localhost
+##The system is going down for maintenance NOW!
+
+shutdown +1 "Goodbye World!"
+# Schedules a shutdown one minute from now and sends a custom message to all logged-in users.
+
+Broadcast message from sysadmin@localhost
+##The system is going down for maintenance in 1 minute!
+##Goodbye World!
+
+##shutdown: Unable to shutdown system
+
+Broadcast message from sysadmin@localhost
+##The system is going down for maintenance NOW!
+##Goodbye World!
