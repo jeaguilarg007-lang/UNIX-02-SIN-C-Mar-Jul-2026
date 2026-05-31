@@ -421,3 +421,46 @@ exit
 # Terminates the current root session and returns to the previous user session.
 
 ##exit
+
+cd ~/Documents
+# Changes the current working directory to the user's Documents folder.
+
+cat food.txt
+# Displays the contents of the file food.txt on the terminal.
+
+##Food is good.
+
+cat food.txt > newfile1.txt
+# Copies the contents of food.txt into newfile1.txt, creating the file if it does not already exist.
+
+cat newfile1.txt
+# Displays the contents of the file newfile1.txt.
+
+##Food is good.
+
+echo "Hello"
+# Prints the specified text to the terminal.
+
+##Hello
+
+cat newfile1.txt
+# Displays the current contents of the file newfile1.txt.
+
+##Food is good.
+
+echo "I like food." > newfile1.txt
+# Writes the specified text to newfile1.txt, replacing any existing content in the file.
+
+cat newfile1.txt
+# Displays the updated contents of the file newfile1.txt.
+
+##I like food.
+
+echo "This food is good." >> newfile1.txt
+# Appends the specified text to the end of newfile1.txt without overwriting the existing content.
+
+cat newfile1.txt
+# Displays the final contents of the file after the new text has been appended.
+
+##I like food.
+##This food is good.
