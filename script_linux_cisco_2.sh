@@ -467,3 +467,6 @@ cat newfile1.txt
 
 vi newfile.txt
 # Opens the file newfile.txt in the Vi text editor, allowing the user to create, view, or modify its contents.
+
+Everything is already done.
+/workspaces/UNIX-02-SIN-C-Mar-Jul-2026/image.png
