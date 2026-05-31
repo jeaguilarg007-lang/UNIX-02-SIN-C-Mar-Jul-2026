@@ -35,3 +35,24 @@ ls
 ##adjectives.txt   food.txt          longfile.txt  red.txt
 ##alpha-first.txt  hello.sh          newhome.txt   zoo.txt
 
+cd ~/Documents
+# Changes the current working directory to the user's Documents folder, allowing the user to work with files and directories stored there.
+
+rm linux.txt
+# Permanently removes the file linux.txt from the current directory.
+
+ls linux.txt
+# Attempts to display information about linux.txt to verify whether the file still exists.
+##ls: cannot access linux.txt: No such file or directory
+
+rm Work
+# Attempts to remove the directory named Work using the rm command without recursive options.
+##rm: cannot remove 'Work': Is a directory
+
+rm -r Work
+# Recursively removes the Work directory and all files and subdirectories contained within it.
+
+ls Work
+# Checks whether the Work directory still exists after the deletion process.
+##ls: cannot access Work: No such file or directory
+
