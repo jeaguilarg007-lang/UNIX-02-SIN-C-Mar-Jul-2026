@@ -71,3 +71,14 @@ cat stdout.txt 2
 lzl 2> error.txt
 cat error.txt
 #bash: lzl: command not found
+
+cat < output.txt
+#Hello World!
+#Goodbye!
+
+cat << EOF
+Black Hat Bash
+by No Starch Press
+EOF
+#Black Hat Bash
+#by No Starch Press
