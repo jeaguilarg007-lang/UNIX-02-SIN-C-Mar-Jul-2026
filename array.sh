@@ -10,3 +10,12 @@ set +x
 
 #$ chmod u+x array.sh
 #$ ./array.sh
+
+IP_ADDRESSES=(192.168.1.1 192.168.1.2 192.168.1.3)
+echo "${IP_ADDRESSES[@]}"
+#192.168.1.1 192.168.1.2 192.168.1.3
+
+echo "${IP_ADDRESSES[0]}"
+#192.168.1.1
+
+apt update&
