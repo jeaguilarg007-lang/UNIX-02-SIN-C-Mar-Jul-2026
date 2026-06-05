@@ -16,4 +16,3 @@ $ echo "Goodbye!" >> output.txt
 $ cat output.txt
 #Hello World!
 #Goodbye!
-cat output.txt
