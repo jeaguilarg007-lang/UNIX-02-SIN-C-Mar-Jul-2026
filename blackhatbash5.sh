@@ -16,3 +16,58 @@ $ echo "Goodbye!" >> output.txt
 $ cat output.txt
 #Hello World!
 #Goodbye!
+
+
+ ls -l / &> stdout_and_stderr.txt
+ cat stdout_and_stderr.txt
+ #total 68
+#lrwxrwxrwx    1 root root    7 may 15 11:37 bin -> usr/bin
+#drwxr-xr-x    2 root root 4096 may 15 11:37 boot
+#drwxr-xr-x    5 root root  340 jun  5 14:11 dev
+#drwxr-xr-x    1 root root 4096 jun  1 14:37 etc
+#drwxr-xr-x    2 root root 4096 may 15 11:37 home
+#lrwxrwxrwx    1 root root    7 may 15 11:37 lib -> usr/lib
+#lrwxrwxrwx    1 root root    9 may 15 11:37 lib64 -> usr/lib64
+#drwxr-xr-x    2 root root 4096 may 31 04:02 media
+#drwxr-xr-x    2 root root 4096 may 31 04:02 mnt
+#drwxr-xr-x    2 root root 4096 may 31 04:02 opt
+#dr-xr-xr-x  236 root root    0 jun  5 14:11 proc
+#drwx------    1 root root 4096 jun  1 14:38 root
+#drwxr-xr-x    1 root root 4096 jun  1 14:37 run
+#lrwxrwxrwx    1 root root    8 may 15 11:37 sbin -> usr/sbin
+#drwxr-xr-x    2 root root 4096 may 31 04:02 srv
+#dr-xr-xr-x   12 root root    0 jun  5 14:04 sys
+#drwxr-xrwt+   4 root root 4096 jun  5 15:04 tmp
+#drwxr-xr-x    1 root root 4096 may 31 04:02 usr
+#drwxr-xr-x    1 root root 4096 jun  1 14:37 var
+#drwxr-xr-x    5 root root 4096 jun  5 14:05 vscode
+#drwxr-xrwx+   4 1000 root 4096 jun  1 14:10 workspaces
+
+ls -l / 1> stdout.txt 2> stderr.txt
+cat stdout.txt 2
+#total 68
+#lrwxrwxrwx    1 root root    7 may 15 11:37 bin -> usr/bin
+#drwxr-xr-x    2 root root 4096 may 15 11:37 boot
+#drwxr-xr-x    5 root root  340 jun  5 14:11 dev
+#drwxr-xr-x    1 root root 4096 jun  1 14:37 etc
+#drwxr-xr-x    2 root root 4096 may 15 11:37 home
+#lrwxrwxrwx    1 root root    7 may 15 11:37 lib -> usr/lib
+#lrwxrwxrwx    1 root root    9 may 15 11:37 lib64 -> usr/lib64
+#drwxr-xr-x    2 root root 4096 may 31 04:02 media
+#drwxr-xr-x    2 root root 4096 may 31 04:02 mnt
+#drwxr-xr-x    2 root root 4096 may 31 04:02 opt
+#dr-xr-xr-x  233 root root    0 jun  5 14:11 proc
+#drwx------    1 root root 4096 jun  1 14:38 root
+#drwxr-xr-x    1 root root 4096 jun  1 14:37 run
+#lrwxrwxrwx    1 root root    8 may 15 11:37 sbin -> usr/sbin
+#drwxr-xr-x    2 root root 4096 may 31 04:02 srv
+#dr-xr-xr-x   12 root root    0 jun  5 15:32 sys
+#drwxr-xrwt+   4 root root 4096 jun  5 15:04 tmp
+#drwxr-xr-x    1 root root 4096 may 31 04:02 usr
+#drwxr-xr-x    1 root root 4096 jun  1 14:37 var
+#drwxr-xr-x    5 root root 4096 jun  5 14:05 vscode
+#drwxr-xrwx+   4 1000 root 4096 jun  1 14:10 workspaces
+
+lzl 2> error.txt
+cat error.txt
+#bash: lzl: command not found
