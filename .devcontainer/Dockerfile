@@ -123,13 +123,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     sed \
     grep \
     \
-    # === Utilidades básicas de UNIX ===
-    # coreutils trae cat, ls, head, tail, sort, cut, tr, etc.
-    # findutils trae find y xargs.
-    # procps trae ps, top, kill (gestión de procesos).
-    # less = paginador para leer archivos largos.
-    # tree = muestra directorios como árbol.
-    # jq = procesa JSON desde la línea de comandos.
+    # === Core UNIX utilities ===
+    # These packages provide many of the standard commands used every day
+    # in the shell. Tools from coreutils support file and text operations,
+    # while findutils adds commands for locating files and combining them
+    # with other programs. Process utilities make it possible to inspect
+    # and manage running tasks, which is useful when debugging scripts
+    # or monitoring applications (BHB Ch.1).
+    #
+    # less provides a convenient way to read long outputs, tree displays
+    # directory structures in a hierarchical form, and jq simplifies the
+    # processing of JSON data directly from the command line.
     coreutils \
     findutils \
     procps \
