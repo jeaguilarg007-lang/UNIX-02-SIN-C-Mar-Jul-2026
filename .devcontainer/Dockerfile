@@ -272,13 +272,16 @@ SHELL ["/bin/bash", "-c"]
 # makes source code easier to access and manage (BHB Ch.3).
 WORKDIR /workspaces
 
-# Configuración de Git para el contenedor:
-# - safe.directory *: confía en cualquier repo montado (necesario porque
-#   /workspaces/... tiene un UID distinto al de root dentro del container).
-# - init.defaultBranch main: evita warnings de "master vs main" en git init.
-# - pull.rebase false: merge por defecto al hacer pull (más intuitivo)
-# - git lfs install --system: registra los hooks de LFS globalmente para
-#   que, si un repo los necesita, funcionen sin sorpresas.
+# ----------------------------------------------------------------------------
+# Configure Git settings for the container environment
+# ----------------------------------------------------------------------------
+# These settings apply to all repositories used inside the container.
+# Marking repositories as safe prevents ownership warnings when files
+# are mounted from external locations. Setting the default branch to
+# "main" keeps new repositories consistent, while disabling rebase on
+# pull uses merge behavior by default. Git LFS support is installed
+# system-wide so repositories containing large files work correctly
+# without additional configuration (BHB Ch.3).
 RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
