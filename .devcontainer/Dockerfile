@@ -252,11 +252,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
 # ----------------------------------------------------------------------------
-# SHELL: qué intérprete usar en los siguientes RUN
+# Define Bash as the interpreter for future RUN instructions
 # ----------------------------------------------------------------------------
-# Por defecto Docker usa /bin/sh (un shell más limitado y antiguo). Lo
-# cambiamos a bash por si agregamos más instrucciones con sintaxis
-# moderna (arrays, [[ ]], etc.).
+# Containers often use /bin/sh as the default shell, but Bash provides
+# additional features that simplify scripting, including improved syntax
+# and support for advanced constructs. Black Hat Bash focuses on Bash as
+# the main interface between the user and the operating system, making it
+# a natural choice for later commands and scripts (BHB Ch.1).
 SHELL ["/bin/bash", "-c"]
 
 
