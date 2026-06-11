@@ -154,7 +154,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     manpages \
     manpages-posix \
     \
-    # === Red básica y utilidades de descarga ===
+        # === Network access and repository management tools ===
+    # These utilities provide the ability to download files, interact with
+    # remote repositories, and establish secure connections. Command-line
+    # tools are frequently combined in Bash workflows to automate tasks
+    # and exchange information between programs (BHB Ch.1).
+    #
+    # curl and wget retrieve data from remote servers, while git and
+    # git-lfs are used to manage source code and large files. The
+    # ca-certificates package allows applications to verify trusted
+    # connections, and locales provides language definitions required
+    # by the environment configuration used later in the image (BHB Ch.3).
     curl \
     wget \
     git \
@@ -162,7 +172,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     locales \
     \
-    # === Linter (revisor automático de errores) para scripts Bash ===
+    # === Shell script analysis tools ===
+    # ShellCheck examines Bash scripts and reports common mistakes before
+    # execution. Using validation tools helps improve reliability and
+    # makes scripts easier to maintain and debug.
     shellcheck \
     \
     # === Reconocimiento y escaneo de red ===
