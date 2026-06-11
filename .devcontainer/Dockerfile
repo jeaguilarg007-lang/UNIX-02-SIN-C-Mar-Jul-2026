@@ -25,27 +25,24 @@ FROM kalilinux/kali-rolling:latest
 
 
 # ----------------------------------------------------------------------------
-# ENV: variables de entorno permanentes dentro del contenedor
+# Environment variables shared by programs running inside the container
 # ----------------------------------------------------------------------------
-# Las variables de entorno son "ajustes globales" que cualquier programa
-# del sistema puede leer. Se escriben en MAYÚSCULAS por convención.
+# Environment variables provide settings that can be inherited by commands
+# and processes launched from the shell. As explained in Bash fundamentals,
+# programs can use these values to modify their behavior without changing
+# the commands themselves (BHB Ch.1).
 #
-#   DEBIAN_FRONTEND=noninteractive
-#     Le dice al instalador de paquetes (apt) "no me hagas preguntas
-#     interactivas, asume respuestas por defecto". Sin esto, algunos
-#     paquetes pausarían el build esperando que pulsemos una tecla y se
-#     quedaría colgado para siempre (porque no hay nadie mirando).
+# DEBIAN_FRONTEND=noninteractive prevents package installation tools from
+# stopping to request input while the image is being built.
 #
-#   LANG / LC_ALL=es_ES.UTF-8
-#     Configuran idioma y codificación de caracteres. UTF-8 es lo que
-#     permite que acentos, ñ, €, emojis, etc. se muestren bien.
+# LANG and LC_ALL define the language and UTF-8 character encoding so that
+# applications handle accented characters and other symbols correctly.
 #
-#   TERM=xterm-256color
-#     Le indica a los programas que la terminal admite 256 colores, para
-#     que vim, nvim, htop, etc. se vean con todos sus colores.
+# TERM informs terminal-based applications about color capabilities and
+# interactive features supported by the shell.
 #
-# La barra invertida "\" al final de cada línea significa "esto continúa
-# en la línea siguiente". Solo es para legibilidad.
+# The backslash "\" allows long instructions to be split across multiple
+# lines, improving readability and maintenance.
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=es_ES.UTF-8 \
     LC_ALL=es_ES.UTF-8 \
