@@ -50,12 +50,20 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 
 # ----------------------------------------------------------------------------
-# Pre-respuesta a una pregunta interactiva de Wireshark
+# Preconfigure Wireshark installation to avoid interactive prompts
 # ----------------------------------------------------------------------------
-# Wireshark/tshark PREGUNTA durante su instalación si los usuarios
-# normales (no-root) deben poder capturar paquetes. Como en el contenedor
-# siempre somos root, respondemos "false" POR ADELANTADO usando
-# debconf-set-selections para que no detenga el build esperando input.
+# Some packages ask questions during installation and wait for user input.
+# Since image builds run automatically, interactive prompts would stop the
+# process. This command sends a predefined answer to debconf so that the
+# installation can continue without interruption.
+#
+# The pipe operator "|" redirects the output of echo to the input of
+# debconf-set-selections. Similar to Bash pipelines, one command produces
+# data and another command consumes it (BHB Ch.1).
+#
+# The value "false" disables packet capture permissions for non-root users.
+# In this container, administrative tasks are performed as root, so no
+# additional permissions are required.
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
