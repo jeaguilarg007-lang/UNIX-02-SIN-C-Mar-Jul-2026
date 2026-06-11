@@ -141,10 +141,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tree \
     jq \
     \
-    # === Páginas de manual (comando `man`) ===
-    # La imagen base de Kali viene sin documentación para
-    # ahorrar espacio. La reinstalamos porque en el curso "man bash" o
-    # "man grep" es material de consulta obligada.
+    # === Manual pages and documentation ===
+    # Manual pages are an important source of information when learning
+    # shell commands. Commands such as man bash, man grep, and man sed
+    # provide descriptions, options, and examples directly from the system.
+    # Black Hat Bash emphasizes using built-in documentation to understand
+    # command behavior instead of relying only on memorization (BHB Ch.1).
+    #
+    # These packages restore the documentation that is often removed from
+    # minimal container images to reduce size.
     man-db \
     manpages \
     manpages-posix \
