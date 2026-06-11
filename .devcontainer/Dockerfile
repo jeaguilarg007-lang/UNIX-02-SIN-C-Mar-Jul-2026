@@ -263,11 +263,13 @@ SHELL ["/bin/bash", "-c"]
 
 
 # ----------------------------------------------------------------------------
-# WORKDIR: directorio de trabajo al entrar al contenedor
+# Set the default working directory inside the container
 # ----------------------------------------------------------------------------
-# Codespaces siempre monta el código del repositorio en
-# /workspaces/<nombre-del-repo>. Establecer /workspaces aquí hace que las
-# terminales se abran cerca de nuestros archivos del curso.
+# Commands executed without an explicit path will start from this
+# location. Setting a working directory keeps files organized and
+# avoids repeatedly typing long paths. In development environments,
+# repositories are mounted under /workspaces, so using this location
+# makes source code easier to access and manage (BHB Ch.3).
 WORKDIR /workspaces
 
 # Configuración de Git para el contenedor:
