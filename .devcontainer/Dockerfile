@@ -316,4 +316,13 @@ PROMPT='%F{cyan}[Jorge-Aguilar🐺]%f %F{yellow}%1~%f %(?.%F{green}ok.%F{red}mal
 EOF
 
 
+# ----------------------------------------------------------------------------
+# Define the default command executed when the container starts
+# ----------------------------------------------------------------------------
+# RUN instructions are executed while the image is being built, whereas
+# CMD specifies what should run when a container is launched. In this
+# case, a Zsh session is started by default, providing an interactive
+# shell ready for command-line work. Startup behavior can be overridden
+# when running the container, making CMD a flexible default rather than
+# a mandatory action (BHB Ch.3).
 CMD ["/usr/bin/zsh"]
