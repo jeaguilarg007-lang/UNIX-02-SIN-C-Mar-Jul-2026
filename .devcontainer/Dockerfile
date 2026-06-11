@@ -178,19 +178,30 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # makes scripts easier to maintain and debug.
     shellcheck \
     \
-    # === Reconocimiento y escaneo de red ===
-    # nmap = el escáner de puertos más famoso.
-    # masscan = escaneo masivo de rangos grandes de IPs.
+    # === Network discovery and scanning tools ===
+    # Security and administration tasks often require gathering information
+    # about hosts and services. Nmap is widely used to identify systems,
+    # ports, and services available on a network, while Masscan is designed
+    # for high-speed scanning of large address ranges. These tools support
+    # the laboratory environment described in Black Hat Bash (BHB Ch.3).
     nmap \
     masscan \
     \
-    # === Captura y análisis de paquetes de red ===
-    # tcpdump = capturador clásico por terminal.
-    # tshark = versión de terminal de Wireshark.
+        # === Packet capture and traffic analysis tools ===
+    # Understanding network communication often requires inspecting packets
+    # exchanged between systems. tcpdump captures traffic directly from the
+    # command line, while tshark provides many of the analysis features of
+    # Wireshark in a terminal environment. These tools are useful for
+    # observing protocols and troubleshooting network behavior (BHB Ch.3).
     tcpdump \
     tshark \
     \
-    # === Utilidades de red variadas ===
+    # === General network utilities ===
+    # Command-line networking tools make it possible to test connectivity,
+    # transfer data, and gather information about hosts and routes. They
+    # complement shell workflows by allowing information produced by one
+    # command to be combined with others through pipes and redirection
+    # mechanisms (BHB Ch.1).
     netcat-traditional \
     socat \
     dnsutils \
@@ -201,19 +212,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     net-tools \
     iputils-ping \
     \
-    # === Anonimato: Tor y similares ===
-    # tor = cliente de la red Tor.
-    # torsocks = "envoltorio" que hace pasar cualquier comando por Tor.
-    # proxychains4 = encadena múltiples proxies.
-    # obfs4proxy = ofusca el tráfico de Tor para evadir bloqueos.
+    # === Privacy and proxy tools ===
+    # Some environments require traffic to be redirected through anonymizing
+    # networks or intermediate proxies. Tor provides anonymous routing,
+    # torsocks allows applications to use the Tor network, proxychains4
+    # redirects traffic through proxy servers, and obfs4proxy helps disguise
+    # traffic patterns. These tools support laboratory experiments and
+    # network analysis tasks (BHB Ch.3).
     tor \
     torsocks \
     proxychains4 \
     obfs4proxy \
     \
-    # === Cliente HTTP más legible que curl para aprender ===
+    # === User-friendly HTTP client ===
+    # HTTPie provides a more readable interface for sending HTTP requests
+    # and inspecting responses. It simplifies interaction with web services
+    # and complements traditional command-line utilities.
     httpie \
-    \
  # --- Después de instalar, activamos el idioma español ---
  # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
  # activar esa línea. Luego locale-gen compila los archivos de idioma.
