@@ -298,6 +298,19 @@ RUN git config --system --add safe.directory '*' \
 RUN chsh -s /usr/bin/zsh root
 
 
+# ----------------------------------------------------------------------------
+# Add custom settings to the Zsh configuration file
+# ----------------------------------------------------------------------------
+# A here-document allows multiple lines of text to be redirected to a file
+# without creating temporary files. The text between EOF markers is sent
+# to the standard input of the cat command, which appends it to .zshrc.
+# This approach simplifies writing configuration files and demonstrates
+# how shell redirection can automate repetitive tasks (BHB Ch.1).
+#
+# The PROMPT variable defines the appearance of the command prompt. It
+# customizes colors, displays the current directory, and shows whether
+# the previous command completed successfully. A consistent prompt makes
+# interactive work easier and provides immediate feedback to the user.
 RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Jorge-Aguilar🐺]%f %F{yellow}%1~%f %(?.%F{green}ok.%F{red}mal %?)%f %# '
 EOF
