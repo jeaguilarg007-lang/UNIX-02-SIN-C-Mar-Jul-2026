@@ -69,23 +69,31 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 
 
 # ----------------------------------------------------------------------------
-# RUN: ejecutar comandos durante la construcción de la imagen
+# Install the software required for the course environment
 # ----------------------------------------------------------------------------
-# Aquí instalamos TODO el software del curso en un solo RUN.
+# This RUN instruction combines package updates and software installation
+# into a single step. Docker processes instructions sequentially, and each
+# RUN creates a new layer. Keeping related commands together reduces the
+# number of layers and helps keep the image smaller and easier to rebuild
+# (BHB Ch.3).
 #
-#   apt-get update          -> actualiza la lista de paquetes disponibles
-#   apt-get install         -> descarga e instala los paquetes listados
-#     -y                    -> responde "sí" automáticamente
-#     --no-install-recommends -> instala SOLO lo esencial (no los extras
-#                                sugeridos). Ahorra cientos de MB.
+# apt-get update refreshes the local package database so the system knows
+# which versions are currently available.
 #
-# ¿Por qué un solo RUN gigante y no 10 RUN pequeños?
-# Porque CADA RUN crea una capa nueva en la imagen. Menos capas = imagen
-# más pequeña, más rápida de construir y de descargar.
+# apt-get install downloads and installs the selected packages.
 #
-# El "&&" encadena comandos: ejecuta el siguiente SOLO SI el anterior
-# terminó bien. Si algo falla, el build se detiene con error (que es lo
-# que queremos: mejor un error claro que una imagen rota).
+# The -y option automatically answers "yes" to installation prompts,
+# allowing the build to continue without manual interaction.
+#
+# The --no-install-recommends option installs only required packages,
+# avoiding additional software that would increase image size.
+#
+# The && operator executes the next command only if the previous one
+# succeeds. This prevents continuing with a partially failed setup and
+# follows the command chaining concepts used in shell scripting (BHB Ch.1).
+#
+# Backslashes "\" split long commands into multiple lines, making them
+# easier to read and maintain.
 RUN apt-get update && apt-get install -y --no-install-recommends \
     \
     # === Editores de texto y shells (intérpretes de comandos) ===
