@@ -1,28 +1,26 @@
 # ============================================================================
-#  Dockerfile — "receta" para construir la imagen del curso
+# Dockerfile for the course environment
 # ============================================================================
-#  Un Dockerfile es un archivo de texto con instrucciones paso a paso que
-#  Docker (o Codespaces) lee de arriba hacia abajo para fabricar una
-#  "imagen". Una imagen es como un molde congelado de un sistema Linux
-#  listo para usar; cada vez que abres el Codespace, se crea un
-#  "contenedor" a partir de ese molde.
+# Docker reads this file sequentially and executes each instruction to
+# create an image. According to the container concepts introduced in
+# Black Hat Bash, the image acts as a reusable template, while a container
+# is a running instance created from that template (BHB Ch.3).
 #
-#  Analogía: la imagen es el PLANO, el contenedor es la CASA construida
-#  con ese plano. Puedes construir muchas casas iguales a partir de un
-#  solo plano, y si destruyes una casa el plano sigue intacto.
-#
-#  Cada instrucción (FROM, ENV, RUN...) crea una "capa". Docker guarda
-#  esas capas en caché: si no cambias las primeras líneas, no las
-#  reconstruye y el siguiente build es casi instantáneo.
+# Instructions are processed in order, so keeping related operations
+# together improves organization and avoids unnecessary rebuild steps.
+# Docker stores intermediate results as layers, which makes rebuilding
+# faster when previous instructions remain unchanged.
 # ============================================================================
 
 
 # ----------------------------------------------------------------------------
-# FROM: imagen base sobre la que vamos a construir
+# Base image used for the course environment
 # ----------------------------------------------------------------------------
-# En lugar de partir de cero, partimos de la imagen oficial de Kali Linux
-# en su versión "rolling" (actualización continua, siempre al día).
-# Todo lo que instalemos más abajo se apila ENCIMA de esta base.
+# Instead of creating a system from scratch, this image starts from
+# Kali Linux Rolling. Kali provides many tools commonly used in
+# networking and security labs, making the environment consistent
+# across different systems. The base image becomes the foundation
+# for all later instructions in this Dockerfile (BHB Ch.3).
 FROM kalilinux/kali-rolling:latest
 
 
