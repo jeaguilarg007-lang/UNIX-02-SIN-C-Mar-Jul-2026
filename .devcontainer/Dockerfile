@@ -96,14 +96,27 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 # easier to read and maintain.
 RUN apt-get update && apt-get install -y --no-install-recommends \
     \
-    # === Editores de texto y shells (intérpretes de comandos) ===
+        # === Text editors and command interpreters ===
+    # Interactive shells and text editors are essential when working with
+    # Bash scripts and command-line tools. Bash acts as the interface
+    # between the user and the operating system, while editors such as
+    # Vim and Neovim make it easier to create and modify scripts and
+    # configuration files (BHB Ch.1).
+    #
+    # zsh provides an alternative shell with additional customization
+    # features, and bash-completion improves usability by suggesting
+    # commands and filenames while typing.
     neovim \
     vim \
     zsh \
     bash-completion \
     \
-    # === Herramientas de 4ta generación ===
-    # Estas son las protagonistas de las Unidades 2, 3 y 4:
+    # === Tools used throughout the course ===
+    # Text processing utilities are a fundamental part of shell scripting.
+    # grep searches for patterns, sed performs stream editing, and gawk
+    # processes structured text. Together with make and perl, these tools
+    # support automation and text manipulation tasks discussed in later
+    # chapters (BHB Ch.2).
     perl \
     make \
     gawk \
