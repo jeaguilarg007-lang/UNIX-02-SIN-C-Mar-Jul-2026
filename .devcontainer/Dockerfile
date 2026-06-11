@@ -229,19 +229,27 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # and inspecting responses. It simplifies interaction with web services
     # and complements traditional command-line utilities.
     httpie \
- # --- Después de instalar, activamos el idioma español ---
- # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
- # activar esa línea. Luego locale-gen compila los archivos de idioma.
+  # --- Enable Spanish locale support ---
+ # The locale configuration file contains disabled entries marked with
+ # the "#" character. The sed utility edits text streams and files, so
+ # it is used here to enable the Spanish UTF-8 locale by removing the
+ # comment character from the corresponding line. Text-processing tools
+ # such as sed are a central part of shell scripting workflows (BHB Ch.2).
+ #
+ # locale-gen generates the files required by the operating system so
+ # applications can display messages and special characters correctly.
  && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
  && locale-gen \
  \
- # --- Limpieza final: reducir el tamaño de la imagen ---
- # apt deja archivos de caché que ya no necesitamos después de instalar.
- # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
- # Si los borráramos en otro RUN, seguirían ocupando en la capa anterior.
+ # --- Remove temporary package data to reduce image size ---
+ # Package managers leave cached files that are no longer necessary after
+ # installation. Cleaning them in the same RUN instruction prevents these
+ # files from being stored in previous image layers, helping keep the
+ # final container smaller and more efficient. Docker creates layers for
+ # each instruction, so related tasks are grouped together whenever
+ # possible (BHB Ch.3).
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
-
 
 # ----------------------------------------------------------------------------
 # SHELL: qué intérprete usar en los siguientes RUN
