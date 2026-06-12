@@ -1,7 +1,7 @@
 #!/bin/bash
 # Specifies that the script should be executed with the Bash shell
 
-FILE="output.txt"
+FILE="dutput.txt"
 # Defines a variable named FILE and assigns it the value "output.txt"
 
 touch "${FILE}"
