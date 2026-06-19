@@ -30,3 +30,8 @@ awk 'NR < 10' log.txt
 #Prints the 7th column (field) from each line of the input. Fields are separated by spaces by default.
  grep "42.236.10.117" log.txt | awk '{print $7}'
 #First finds all lines in log.txt that contain the IP address 42.236.10.117, then extracts and prints the 7th column from those matching lines.
+
+sed 's/Mozilla/Godzilla/g' log.txt
+
+sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
+sed 's/ //g' log.txt
